@@ -15,6 +15,16 @@ receipeController.index = (req, res) => {
     });
 };
 
+receipeController.show = (req, res) => {
+  Receipe.findById(req.params.id)
+    .then(receipe => {
+      res.render('receipe/show', { receipe: receipe })
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
+};
+
 module.exports = receipeController;
 
 
