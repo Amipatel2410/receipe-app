@@ -1,0 +1,23 @@
+<%# views/receipe/edit.ejs %>
+
+<h1>Edit a receipe</h1>
+
+<form action="<%= `/receipe/${receipe.id}?_method=PUT` %>" method="POST">
+  <label for="title">Title</label>
+  <input id="title" type="text" name="title" value="<%= receipe.title %>" />
+
+  <br />
+  <label for="picture"> Picture URL </label>
+    <input type="text" name="picture" value="<%= receipe.picture %>" />
+
+    <br/>
+
+  <label for="direction">Direction</label>
+  <input id="direction" type="text" name="direction" value="<%= receipe.direction %>" />
+
+  <br />
+
+  <input type="submit" value="Save changes" />
+</form>
+
+<a href="<%= `/receipe/${receipe.id}` %>">Cancel</a>
