@@ -1,0 +1,15 @@
+<%# views/receipe/index.ejs %>
+
+<h1>All the receipes</h1>
+
+<% receipe.forEach(receipe => { %>
+  <div class="receipe">
+    <h4>
+      <a href="<%= `/receipe/${receipe.id}` %>">
+        <%= receipe.title %>
+      </a>
+    </h4>
+    <img src="<%= receipe.picture%>" alt="<%= receipe.title %>" />
+    <p><%= receipe.direction %></p>
+  </div>
+<% }) %>
