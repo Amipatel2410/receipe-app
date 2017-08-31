@@ -6,5 +6,9 @@
 
 <p><%= receipe.direction %></p>
 
-<a href="/receipe">Back to receipe index</a>
+<a href="/user">Back to receipe index</a>
 <a href="<%= `/receipe/${receipe.id}/edit`%>">Edit receipe details</a>
+
+<form action="/receipe/<%= receipe.id %>?_method=DELETE" method="POST">
+  <input type="submit" value="Delete" />
+</form>

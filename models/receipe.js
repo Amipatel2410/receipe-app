@@ -25,15 +25,32 @@ Receipe.update = (receipe, id) => {
   );
 };
 
-
-Receipe.create = receipe => {
+Receipe.create = (receipe, userid) => {
   return db.one(
     `
       INSERT INTO receipe
-      (title, picture, direction)
-      VALUES ($1, $2, $3) RETURNING *
+      (title, picture, direction, user_id)
+      VALUES ($1, $2, $3, $4) RETURNING *
     `,
-    [receipe.title, receipe.picture, receipe.direction]
+    [receipe.title, receipe.picture, receipe.direction, userid]
   );
 };
+
+
+Receipe.destroy = id => {
+  return db.none(
+    `
+      DELETE FROM receipe
+      WHERE id = $1
+    `,
+    [id]
+  );
+};
+
+
+
+
+
+
+
 module.exports = Receipe;

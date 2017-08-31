@@ -1,7 +1,15 @@
 
+
+
 <% include ../partials/boilerplate %>
 
 
+<%# views/receipe/index.ejs %>
+<h1> <%= user.username %> </h1>
+<a href="/receipe/new">Add a new receipe!</a>
+<% if(receipe.length == 0) {%>
+  <h1>User has no recipes</h1>
+<% } else {%>
 <% receipe.forEach(receipe => { %>
   <div class="receipe">
     <h4>
@@ -13,7 +21,6 @@
     <p><%= receipe.direction %></p>
   </div>
 <% }) // end of foreach%>
+<% } // end of Else %>
 
 <% include ../partials/end %>
-
-
