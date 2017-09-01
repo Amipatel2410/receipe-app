@@ -33,6 +33,11 @@ app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
 
+
+const receipesearchRouter = require('./routes/receipesearch-routes');
+app.use('/receipesearch', receipesearchRouter);
+
+
 app.use(function (req, res, next) {
   res.locals.user = req.user || null;
   next();
@@ -46,6 +51,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/', (req, res) => {
   res.render('main-index');
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`App is up and running. Listening on port ${PORT}`);

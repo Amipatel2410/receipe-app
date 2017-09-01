@@ -1,16 +1,18 @@
-const ReceipesearchController = {};
 
-ReceipesearchController.index = (req, res) => {
+
+
+
+
+const receipesearchController = {};
+receipesearchController.index = (req, res) => {
   res.json({
     message: 'Here is our receipe index route',
   });
 }
+receipesearchController.sendApiReceipe = (req, res) => {
+  res.render('receipesearch/results', {
 
-ReceipesearchController.sendApiReceipe = (req, res) => {
-  res.json({
-    message: `Receipe for ${req.params.title}`,
-    weather: res.locals.receipeData,
+     data: res.locals.recipeData
   })
-}
-
-module.exports = ReceipesearchController;
+};
+module.exports = receipesearchController;

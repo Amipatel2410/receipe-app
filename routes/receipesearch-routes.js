@@ -1,12 +1,13 @@
+
+
+
 const express = require('express');
-const ReceipesearchRouter = express.Router();
+const receipesearchRouter = express.Router();
+const receipesearchController = require('../controllers/receipesearch-controller');
+const receipesearchHelper = require('../services/receipe/receipe-helper');
+receipesearchRouter.get('/', receipesearchController.index);
 
-const ReceipesearchController = require('../controllers/receipesearch-controller');
-const receipehelper = require('../services/receipe/receipe-helper');
-
-ReceipesearchRouter.get('/', ReceipesearchController.index);
+receipesearchRouter.post('/results', receipesearchHelper.getReceipeFromAPI, receipesearchController.sendApiReceipe);
 
 
-ReceipesearchRouter.get('/title', receipehelper.getReceipeFromAPI, ReceipesearchController.sendApiReceipe);
-
-module.exports = ReceipesearchRouter;
+module.exports = receipesearchRouter;
