@@ -7,4 +7,5 @@ CREATE TABLE IF NOT EXISTS receipe (
   title VARCHAR(255),
   picture VARCHAR(255),
   direction TEXT
+
 );

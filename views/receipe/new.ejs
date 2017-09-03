@@ -1,24 +1,47 @@
+
+<% include ../partials/boilerplate %>
 <%# views/receipe/new.ejs %>
 
-<h1>Create a new Receipe</h1>
+
+<div class="main-new">
+
+
+<div class="new-title">
+<h1> Add a new Receipe</h1>
+</div>
 
 <form action="/receipe" method="POST">
-  <label for="title">Title</label>
+
+  <div class="label-title">
+  <label for="title">Title</label> <br/>
   <input id="title" type="text" name="title" placeholder="Title here" />
-
-  <br />
-  <label for="picture"> Picture URL </label>
-    <input type="text" name="picture" value="picture" placeholder="Picture Url" />
+  </div>
 
   <br />
 
-  <label for="direction">Direction</label>
+  <div class="label-img">
+  <label for="picture"> Picture URL </label> <br/>
+    <input type="text" name="picture" placeholder="Picture Url" />
+  </div>
+
+  <br />
+
+  <div class="label-detail">
+  <label for="direction">Direction</label> <br/>
   <input id="direction" type="text" name="direction" placeholder="Direction here" />
-  <textarea name="text" cols="40" rows="5"></textarea>
+  </div>
 
   <br />
 
-  <input type="submit" value="Create the Receipe!" />
+  <div class="recipe-add"> <input type="submit" value="Add Recipe!" /> </div>
+
 </form>
 
+
+<div class="new-cancel">
 <a href="/user">Cancel</a>
+</div>
+
+</div>
+
+<% include ../partials/end %>

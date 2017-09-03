@@ -1,24 +1,45 @@
-<%# views/receipe/edit.ejs %>
+<% include ../partials/boilerplate %>
 
-<h1>Edit a receipe</h1>
+
+
+<%# views/receipe/edit.ejs %>
+<div class="main-new">
+
+
+<div class="new-title">
+<h1>Edit recipe</h1>
+</div>
 
 <form action="<%= `/receipe/${receipe.id}?_method=PUT` %>" method="POST">
-  <label for="title">Title</label>
+
+  <div class="label-title">
+  <label for="title">Title</label> <br/>
   <input id="title" type="text" name="title" value="<%= receipe.title %>" />
+  </div>
 
   <br />
-  <label for="picture"> Picture URL </label>
-    <input type="text" name="picture" value="<%= receipe.picture %>" />
 
+<div class="label-img">
+  <label for="picture"> Picture URL </label> <br/>
+    <input type="text" name="picture" value="<%= receipe.picture %>" />
+    </div>
     <br/>
 
-  <label for="direction">Direction</label>
-  <input id="direction" name="direction" value="<%= receipe.direction %>" />
-  <textarea name="text" cols="40" rows="5">"<%= receipe.direction %>"</textarea>
-
+<div class="label-detail">
+  <label for="direction">Direction</label> <br/>
+  <input id="direction" type="text" name="direction" value="<%= receipe.direction %>" />
+</div>
   <br />
 
-  <input type="submit" value="Save changes" />
+  <div class="recipe-add"> <input type="submit" value="Save changes" /> </div>
 </form>
 
+<div class="new-cancel">
 <a href="<%= `/receipe/${receipe.id}` %>">Cancel</a>
+</div>
+
+</div>
+
+
+
+<% include ../partials/end %>

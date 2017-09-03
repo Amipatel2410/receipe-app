@@ -1,8 +1,25 @@
+
+
+<% include ../partials/boilerplate %>
+
+
+<div class="login">
 <%# views/auth/register.ejs %>
+<div class="reg_head"> <p> Create New Account </p></div>
 
 <form method="POST" action="/auth/register">
-  <input name="username" type="text" placeholder="username" required />
-  <input name="email" type="email" placeholder="email" required />
-  <input name="password" type="password" placeholder="password" required />
+
+  <div class="imgcontainer">
+    <img src="../img/reg_logo.jpg" alt="logo" />
+  </div>
+
+  <div class="inputfield">
+  <label> Username <input name="username" type="text" placeholder="username" required /> </label>
+  <label>Email Id<input name="email" type="email" placeholder="email" required /> </label>
+  <label> Password<input name="password" type="password" placeholder="password" required /> </label>
   <input type="submit" value="Register!" />
+  </div>
 </form>
+
+</div>
+<% include ../partials/end %>

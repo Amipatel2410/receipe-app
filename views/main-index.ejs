@@ -1,14 +1,24 @@
 <% include ./partials/boilerplate %>
 
-  <h1>Welcome to the Receipe World</h1>
-  <a href='/receipe'>Receipe</a>
 
-<form id='request' action="/receipesearch/results" method="post">
-    <input id="title" type='text' name='title' placeholder='Search receipe title here' />
-    <input type='submit' value='Get the receipe!' />
+<div class="main_img">
+
+
+<div class="main_heading">
+  <h1>Welcome to Recipe World</h1>
+</div>
+
+
+
+<div class="main_form">
+<form id='search_form' action="/receipesearch/results" method="post">
+    <input class="title" type='text' name='title' placeholder='Search recipe here' />
+    <input class="btnsearch" type='submit' value='Get receipe!' />
 </form>
+</div>
+
+</div>
 
 
 
-<h1>
 <% include ./partials/end %>

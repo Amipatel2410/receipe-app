@@ -28,6 +28,8 @@ app.use(passport.session());
 const receipeRouter = require('./routes/receipe-routes');
 app.use('/receipe', receipeRouter)
 
+//app.use('/user-index', receipeRouter);
+
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
@@ -43,7 +45,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

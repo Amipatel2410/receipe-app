@@ -1,13 +1,26 @@
+<% include ../partials/boilerplate %>
 
+<div class="result-holder">
 
-<div id="container">
+  <div class="result-title"> <h1> Title: <%= data.recipes[0].title %></h1> </div>
+  <div class="result-pubname"><h2> Publisher: <%= data.recipes[0].publisher %></h2> </div>
 
-  <div id="title"><h1> <%= data.recipes[0].title %></h1>
-  <p> <%= data.recipes[0].recipe_id %></p>
-   </div>
-  <div id="img"> <img src="<%= data.recipes[0].image_url %>"/>
-  <a href="<%= data.recipes[0].source_url %>"><p> <%= data.recipes[0].source_url %> </p></a>
-   </div>
+  <div class="recipeid"> <h3> RecipeId: <%= data.recipes[0].recipe_id %></h3> </div>
+
+  <div id="result-img"> <img src="<%= data.recipes[0].image_url %>" height="300px" width="300px"/> </div>
+  <div id="result-rank"><h3> Social Rank: <%= data.recipes[0].social_rank %></h3> </div>
+  <div id="result-link"><a href="<%= data.recipes[0].source_url %>"> Detail Recipe Link </a></div>
+</div>
+
+<div class="result-hide">
+
+<form id='request' action="/user-index" method="post">
+    <input id="title" type='hidden' name='title' value="<%= data.recipes[0].title %>" />
+    <input id="image" type="hidden" value="<%= data.recipes[0].image_url %>"/>
+    <input id="direction" type="hidden" value="<%= data.recipes[0].source_url %>"/>
+    <input type='submit' value='submit' />
+</form>
 
 </div>
 
+<% include ../partials/end %>

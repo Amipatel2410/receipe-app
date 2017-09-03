@@ -1,14 +1,32 @@
+
+
+<% include ../partials/boilerplate %>
+
 <%# views/receipe/show.ejs %>
 
+<div class="show-holder">
+
+<div class="show-title">
 <h1><%= receipe.title %></h1>
+</div>
 
-<img src="<%= receipe.picture%>" alt="<%= receipe.title %>" />
+<div class="show-img">
+<img src="<%= receipe.picture%>" alt="<%= receipe.title %>" height="300px" width="300px" />
+</div>
 
+<div class="show-detail">
 <p><%= receipe.direction %></p>
+</div>
 
-<a href="/user">Back to receipe index</a>
-<a href="<%= `/receipe/${receipe.id}/edit`%>">Edit receipe details</a>
-
-<form action="/receipe/<%= receipe.id %>?_method=DELETE" method="POST">
+  <div id="links">
+  <div class="back"><a href="/user">Back</a> </div>
+  <div class="edit-show"> <a href="<%= `/receipe/${receipe.id}/edit`%>">Edit receipe details</a> </div>
+  <div class="formbtndel">
+  <form action="/receipe/<%= receipe.id %>?_method=DELETE" method="POST">
   <input type="submit" value="Delete" />
-</form>
+  </form></div>
+  </div>
+
+</div>
+
+<% include ../partials/end %>

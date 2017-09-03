@@ -1,7 +1,25 @@
+<% include ../partials/boilerplate %>
+
 <%# views/auth/login.ejs %>
 
+<div class="login">
 <form method="POST" action="/auth/login">
+
+<div class="imgcontainer">
+    <img src="../img/receipelogo.jpg" alt="logo" />
+  </div>
+<div class="inputfield">
+<label> <b> Username </b> </label>
   <input name="username" type="text" placeholder="username" required />
+
+  <label> <b> Password </b> </label>
   <input name="password" type="password" placeholder="password" required />
   <input type="submit" value="Log in!" />
+</div>
+
 </form>
+
+<div class="cancelbtn"> <a href="/"> Cancel </a> </div>
+</div>
+
+<% include ../partials/end %>

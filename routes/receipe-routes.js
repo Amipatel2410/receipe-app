@@ -9,15 +9,16 @@ receipeRouter.get('/',  receipeController.index)
 
 
 receipeRouter.get('/new', receipeController.new)
-receipeRouter.post('/', receipeController.create)
+
+receipeRouter.post('/', authHelper.loginRequired, receipeController.create, receipeController.usersreceipe )
 
 receipeRouter.get('/:id', receipeController.show)
 
 receipeRouter.get('/:id/edit', receipeController.edit)
 
-receipeRouter.put('/:id', receipeController.update)
+receipeRouter.put('/:id',  receipeController.update)
 
-receipeRouter.delete('/:id', receipeController.destroy)
+receipeRouter.delete('/:id',  receipeController.destroy)
 
 //receipeRouter.post('/results', receipehelper.getReceipeFromAPI, receipeController.sendApiReceipe);
 

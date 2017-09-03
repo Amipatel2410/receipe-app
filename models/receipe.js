@@ -47,6 +47,35 @@ Receipe.destroy = id => {
   );
 };
 
+//this is for sending api data to database
+
+Receipe.usersreceipe = (receipe) => {
+
+  return db.one(
+
+    `INSERT INTO users_receipe
+    (user_id, receipe_id)
+    VALUES ($1, $2) RETURNING *
+    `[receipe.user_id, receipe.id]);
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
