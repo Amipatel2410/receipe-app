@@ -11,13 +11,13 @@
 <h1> Welcome <%= user.username %> </h1>
 </div>
 <div> <img src="../img/p1.jpg" alt="profile pic" height="200px" width="200px"/> </div>
-<div class="addlink"><a href="/receipe/new">Add a new receipe!</a></div>
+<div class="addlink"><a href="/receipe/new">Add a new recipe!</a></div>
 </div>
 
 
 
 <% if(receipe.length == 0) {%>
-  <div> <h1>User has no recipes</h1> </div>
+  <div class="no-recipe"> <h1>User has no recipes</h1> </div>
 <% } else {%>
 <div id="recipe-holder">
 <% receipe.forEach(receipe => { %>

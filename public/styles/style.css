@@ -209,7 +209,6 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 
 /* login and register page here */
 .login{
-  height: 625px;
   position: relative;
   left: 260px;
   top:25px;
@@ -223,7 +222,7 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
   left: 100px;
 }
 .inputfield{
-  height: 300px;
+  height: 350px;
   width: 300px;
 }
 .inputfield label{
@@ -248,6 +247,7 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
       border: 1px solid #ccc;
       border-radius: 30px;
       box-sizing: border-box;
+      font-size: 20px;
 }
 .inputfield input[type=submit] {
     background-color: #09ba9f;
@@ -271,7 +271,7 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
   font-family: 'Lobster', cursive;
   position:relative;
   left: 20px;
-  bottom: 80px;
+  bottom: 100px;
 }
 .reg_head{
     height: 50px;
@@ -286,7 +286,10 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 /* user-index page is here
 
 /* user-profile css */
-
+.no-recipe {
+  position: relative;
+  left: 325px;
+}
 .user-center{
   height: 300px;
   width: 900px;
@@ -299,7 +302,7 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 .user-center img{
   position: relative;
   left: 350px;
-  border: 2px solid #09ba9f;
+  border: 5px solid #09ba9f;
   border-radius: 50%;
 }
 .addlink{
@@ -492,9 +495,16 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
   position: relative;
   left: 250px;
 }
+.result-title{
+  position: relative;
+  right: 250px;
+}
+.result-title h1{
+  text-align: center;
+}
 .result-pubname{
   position: relative;
-  left: 25px;
+  left: 50px;
 }
 .recipeid{
   position: relative;
@@ -502,7 +512,7 @@ box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
 }
 #result-rank{
   position: relative;
-  left: 50px;
+  left: 100px;
 }
 #result-img{
   position: relative;

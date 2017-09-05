@@ -1,4 +1,4 @@
-\c receipe-app-development;
+
 
 
 CREATE TABLE IF NOT EXISTS users_receipe (

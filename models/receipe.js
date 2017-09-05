@@ -61,25 +61,4 @@ Receipe.usersreceipe = (receipe) => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = Receipe;

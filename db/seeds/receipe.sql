@@ -1,4 +1,4 @@
-\c receipe-app-development;
+
 
 INSERT INTO receipe(title, picture, direction) VALUES
   ('Grill Sandwitch','https://challengedairy.com/files/recipe_images/recipe_tuscan_grilled_cheese.jpg',
